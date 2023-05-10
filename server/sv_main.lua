@@ -7,7 +7,7 @@ end)
 -- 10 Minutes Reminder
 AddEventHandler('txAdmin:events:scheduledRestart', function(eventData)
     if eventData.secondsRemaining == 600 then
-        TriggerClientEvent('RRRP-Storm:client:5MinWarning', -1)
+        TriggerClientEvent('RRRP-Storm:client:10MinWarning', -1)
     end
 end)
 -- 5 Minutes Reminder
