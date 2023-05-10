@@ -36,6 +36,8 @@ end)
 -- 5 Minutes Reminder
 RegisterNetEvent('RRRP-Storm:client:5MinWarning', function(text)
     TriggerEvent('redem_roleplay:NotifyLeft', "STORM WARNING", "A storm is coming in 5 minutes! Please start heading home or somewhere local for SAFETY!", "menu_textures", "menu_icon_alert", 5000)
+    Citizen.Wait(math.random(15000, 25000))
+    TriggerServerEvent("weathersync:setWeather", Config.ThirdWeather, 1000 * 1.0, true, Config.Winter)
     Citizen.Wait(math.random(10000, 20000))
     TsunamiEffect()
 end)
